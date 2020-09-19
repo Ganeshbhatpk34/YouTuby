@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Youtuby</string>
+
+    <string-array name="my_youtubeURL_array">
+		<item>RZaGCYIyz9M</item>
+        <item>a7Cz-UfKgm4</item>
+        <item>Vyto_CA53bs</item>
+		<item>OlGfSKcWhdA</item>
+		<item>Z6szMwKsoX4</item>
+		<item>ALZHF5UqnU4</item>
+		<item>ApXoWvfEYVU</item>
+		<item>dhYOPzcsbGM</item>
+		<item>MnZo82twxek</item>
+		<item>Kaujug-JkDQ</item>
+		<item>VHENoFDoLds</item>
+		<item>nBBaHKQHxiU</item>
+		<item>TCMnrssX1NE</item>
+		<item>wm2v6IpKXI4</item>
+    </string-array>
+
+    <string-array name="my_youtubeName_array">
+		<item>Codegama Team</item>
+		<item>Dave Edwards - What Were Made Of (ft. Mark Asari)</item>
+        <item>PlayBold Anthem 2018 - Royal Challengers Bangalore Anthem 2018 | Being mad production |</item>
+		<item>Official CSK #WhistlePodu Video 2020</item>
+		<item>FIFA World Cup Russia 2018 Official Promo</item>
+		<item>Marshmello - Alone (Official Music Video)</item>
+		<item>Post Malone, Swae Lee - Sunflower (Spider-Man Into the Spider-Verse)</item>
+		<item>Alan Walker, Sabrina Carpenter Farruko - On My Way</item>
+		<item>Adhvik - Ninna Gungalli Official Lyric Video</item>
+		<item>Audience choice mashup 2020 | Multilingual | 15 tracks | Nithyashree | Cavemans Studio</item>
+		<item>Quarantine Mashup | Antakshari | Joshua Aaron ft Nithyashree,Srinisha,Aajeedh,Ahmed Meeran,Aishwerya</item>
+		<item>Tomorrowland Around the World 2020 | Official Aftermovie</item>
+		<item>Introducing Apple Watch Series 6 — It Already Does That</item>
+		<item>Google IO 2019 event in 13 minutes</item>
+    </string-array>
+
+</resources>
