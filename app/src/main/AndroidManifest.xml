@@ -20,7 +20,8 @@
 
         <activity
             android:name="com.ganapathi.youtuby.MainActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"></activity>
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:screenOrientation="fullSensor"></activity>
 
     </application>
 

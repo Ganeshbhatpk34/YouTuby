@@ -1,5 +1,9 @@
 package com.ganapathi.youtuby;
 
+/**
+ * Created by Ganapathi on 19-09-2020.
+ */
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -25,11 +29,11 @@ public class HomeActivity extends AppCompatActivity implements  ItemClickListene
     private static final int PERMISSIONS_REQUEST = 123;
     RecyclerView recyclerView;
     SwipeRefreshLayout refreshCollection;
-    public static ArrayList<productversion> productversions;
-    public ArrayList<productversion> product_version = new ArrayList<>();
+    public static ArrayList<Youtube> productversions;
+    public ArrayList<Youtube> product_version = new ArrayList<>();
     DataAdapter adapter;
     BottomBarLayout bottomBarLayout;
-    BottomTabView tab_all, tab_music, tab_video;
+    BottomTabView tab_all,tab_live, tab_music, tab_video;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,24 +45,25 @@ public class HomeActivity extends AppCompatActivity implements  ItemClickListene
 
         bottomBarLayout = findViewById(R.id.bottom_bar);
 
-        BottomTabView tab_all = new BottomTabView(this);
+        tab_all = new BottomTabView(this);
         tab_all.setTabIcon(R.drawable.ic_video_library_black_24dp);
         tab_all.setTabTitle("All");
 
-        tab_all = new BottomTabView(this);
-        tab_all.setTabIcon(R.drawable.ic_videocam_black_24dp);
-        tab_all.setTabTitle("Video");
+        tab_live = new BottomTabView(this);
+        tab_live.setTabIcon(R.drawable.ic_videocam_black_24dp);
+        tab_live.setTabTitle("Video");
 
         tab_music = new BottomTabView(this);
-        tab_all.setTabIcon(R.drawable.ic_music_video_black_24dp);
-        tab_all.setTabTitle("Music");
+        tab_music.setTabIcon(R.drawable.ic_music_video_black_24dp);
+        tab_music.setTabTitle("Music");
 
         tab_video = new BottomTabView(this);
-        tab_all.setTabIcon(R.drawable.ic_subscriptions_black_24dp);
-        tab_all.setTabTitle("Subs");
+        tab_video.setTabIcon(R.drawable.ic_subscriptions_black_24dp);
+        tab_video.setTabTitle("Subs");
 
         bottomBarLayout
                 .addTab(tab_all)
+                .addTab(tab_live)
                 .addTab(tab_music)
                 .addTab(tab_video)
                 .create(new BottomBarLayout.OnTabSelectedListener() {
@@ -99,16 +104,16 @@ public class HomeActivity extends AppCompatActivity implements  ItemClickListene
         adapter.setClickListener(HomeActivity.this);
     }
 
-    private ArrayList<productversion> prepareData() {
+    private ArrayList<Youtube> prepareData() {
         String[] youTubeURL = getResources().getStringArray(R.array.my_youtubeURL_array);
         String[] youTubeVideo = getResources().getStringArray(R.array.my_youtubeName_array);
 
         product_version = new ArrayList<>();
         productversions = new ArrayList<>();
         for (int i = 0; i < youTubeURL.length; i++) {
-            productversion productversion = new productversion();
-            productversion.setAndroid_version_name(youTubeVideo[i]);
-            productversion.setAndroid_imagePath(youTubeURL[i]);
+            Youtube productversion = new Youtube();
+            productversion.setAndroid_youtube_name(youTubeVideo[i]);
+            productversion.setAndroid_youtubePath(youTubeURL[i]);
             product_version.add(productversion);
         }
         return product_version;
@@ -128,8 +133,8 @@ public class HomeActivity extends AppCompatActivity implements  ItemClickListene
     @Override
     public void onClick(final View view, int posi) {
         Intent tender = new Intent(this, MainActivity.class);
-        tender.putExtra("videoId", product_version.get(posi).getAndroid_imagePath());
-        tender.putExtra("videoName", product_version.get(posi).getAndroid_version_name());
+        tender.putExtra("videoId", product_version.get(posi).getAndroid_youtubePath());
+        tender.putExtra("videoName", product_version.get(posi).getAndroid_youtube_name());
         startActivity(tender);
     }
 

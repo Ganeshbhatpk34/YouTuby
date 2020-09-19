@@ -1,7 +1,7 @@
 package com.ganapathi.youtuby;
 
 /**
- * Created by Ganapathi on 11-03-2018.
+ * Created by Ganapathi on 19-09-2020.
  */
 
 import android.content.Context;
@@ -25,16 +25,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> implements Filterable {
     private ItemClickListener clickListener;
-    private ArrayList<productversion> android;
-    private ArrayList<productversion> arraylist;
+    private ArrayList<Youtube> android;
+    private ArrayList<Youtube> arraylist;
     private Context context;
     private Lifecycle lifecycle;
 
 
-    public DataAdapter(Context context, ArrayList<productversion> android, Lifecycle lifecycle) {
+    public DataAdapter(Context context, ArrayList<Youtube> android, Lifecycle lifecycle) {
         this.android = android;
         this.context = context;
-        this.arraylist = new ArrayList<productversion>();
+        this.arraylist = new ArrayList<Youtube>();
         this.arraylist.addAll(android);
         this.lifecycle = lifecycle;
     }
@@ -49,9 +49,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
 
     @Override
     public void onBindViewHolder(final DataAdapter.ViewHolder viewHolder,final int i) {
-        productversion productversion = android.get(i);
-        viewHolder.tv_android.setText(productversion.getAndroid_version_name());
-        viewHolder.cueVideo(productversion.getAndroid_imagePath());
+        Youtube productversion = android.get(i);
+        viewHolder.tv_android.setText(productversion.getAndroid_youtube_name());
+        viewHolder.cueVideo(productversion.getAndroid_youtubePath());
     }
 
     @Override
@@ -71,13 +71,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     private Filter exampleFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            List<productversion> filteredList = new ArrayList<>();
+            List<Youtube> filteredList = new ArrayList<>();
             if (constraint == null || constraint.length() == 0) {
                 filteredList.addAll(arraylist);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
-                for (productversion item : arraylist) {
-                    if (item.getAndroid_version_name().toLowerCase().contains(filterPattern)) {
+                for (Youtube item : arraylist) {
+                    if (item.getAndroid_youtube_name().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }
                 }

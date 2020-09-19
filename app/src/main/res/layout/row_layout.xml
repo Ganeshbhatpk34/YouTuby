@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginBottom="5dp"
     app:cardElevation="10dp"
     tools:style="@style/CardView.Light">
 
@@ -62,8 +61,8 @@
                     </RelativeLayout>
 
                     <TextView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
                         android:layout_alignRight="@id/relative_layout"
                         android:background="@drawable/circleyellowfil"
                         android:gravity="center"
@@ -91,7 +90,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="15dp"
                 android:gravity="left|center"
                 android:orientation="horizontal"
                 android:weightSum="1">
@@ -103,9 +102,8 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:orientation="horizontal"
-                    android:textColor="@color/black"
                     android:padding="2dp"
-                    android:text="Channel \u2022 No of ViewsK"
+                    android:text="Channel \u2022 No of Views \u2022"
                     android:textSize="14dp" />
             </LinearLayout>
 

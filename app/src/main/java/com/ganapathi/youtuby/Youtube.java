@@ -1,29 +1,29 @@
 package com.ganapathi.youtuby;
 
-import android.graphics.Bitmap;
-
 /**
- * Created by Ganapathi on 11-03-2018.
+ * Created by Ganapathi on 19-09-2020.
  */
 
-public class productversion {
+import android.graphics.Bitmap;
+
+public class Youtube {
 
     private String android_version_name, image_path;
     private Bitmap android_image_url, userprofilepic;
 
-    public String getAndroid_version_name() {
+    public String getAndroid_youtube_name() {
         return android_version_name;
     }
 
-    public void setAndroid_version_name(String android_version_name) {
+    public void setAndroid_youtube_name(String android_version_name) {
         this.android_version_name = android_version_name;
     }
 
-    public String getAndroid_imagePath() {
+    public String getAndroid_youtubePath() {
         return image_path;
     }
 
-    public void setAndroid_imagePath(String image_path) {
+    public void setAndroid_youtubePath(String image_path) {
         this.image_path = image_path;
     }
 
